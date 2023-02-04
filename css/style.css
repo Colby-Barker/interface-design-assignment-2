@@ -1,0 +1,564 @@
+/* Basic styling and menu/nav */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+}
+.header{
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    height: 125px;
+    width: 100%;
+    padding: 0px 10px;
+    margin: 0px;
+    position: fixed;
+    z-index: 9999;
+    transition: all 0.25s ease;
+}
+header div{
+    height: 115px;
+    width: auto;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+header img{
+    height: 100%;
+    width: auto;
+}
+menu{
+    display: flex;
+    margin-bottom: 0px;
+    list-style: none;
+    padding: 30px;
+}
+menu li{
+    border-right: solid 2px #0e0e0e;
+    padding: 0px 10px;
+}
+menu li:last-of-type{
+    border-right: none;
+}
+menu li a:link{
+    text-decoration: none;
+    color: #0e0e0e;
+}
+menu li a:active{
+    text-decoration: underline;
+}
+menu li a:hover{
+    color: #7a2518;
+}
+.header div{
+    height: 130px;
+    transition: all .25s linear;
+}
+.scrolled-menu {
+    background-color: #0e0e0e;
+}
+.scrolled-menu  menu li{
+    border-right: solid 2px #f4f4f4;
+    padding: 0px 10px;
+}
+.scrolled-menu  menu li:last-of-type{
+    border-right: none;
+}
+.scrolled-menu  menu li a{
+    color: #f4f4f4;
+}
+.scrolled-menu  menu li a:link{
+    text-decoration: none;
+    color: #f4f4f4;
+}
+.scrolled-menu  menu li a:active{
+    text-decoration: underline;
+}
+.scrolled-menu  menu li a:hover{
+    color: #7a2518;
+}
+.hidden{
+    height: 100px;
+}
+
+/* fonts: two Google fonts and one custom font */
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Kanit', sans-serif;
+}
+h1{
+    font-size: 32px;
+}
+h3{
+    font-size: 25px;
+}
+p,a,li{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+@font-face {
+    /* name of font */
+    font-family: Mistral;
+    /* path to font */
+    src: url("../font/CopyofMistral2.ttf");
+}
+
+/* Title: background is an cover image and the h1 uses 2 fonts */
+.title{
+    padding-top: 50px;
+    padding-bottom: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/members.jpg");
+    background-size: cover;
+}
+.title h1{
+    text-align: center;
+    padding: 0px;
+}
+.title h1 span:first-of-type{
+    display: block;
+    text-align: center;
+    font-size: 15px;
+}
+.title h1 span:last-of-type{
+    font-family: Mistral;
+    font-size: 100px;
+    text-align: center;
+}
+
+/* Song: all the div are formatted the same with differnt content */
+/* centres all the text */
+.music{
+    text-align: center;
+}
+/* 400px margin (200px left and 200px right) on all the paragraph elements in this section*/
+.music p{
+    margin-right: 200px;
+    margin-left: 200px;
+}
+/* each of the divs uses a background image of the differnt artists, the divs vary in height but other than that they are the same */
+.music div:nth-child(1){
+    background-image: url("../img/eazy-e.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+}
+/* I used a mask to help the text stand out */
+.music div:nth-child(1) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* every h3 element is underlined */
+.music div:nth-child(1) span h3{
+    text-decoration: underline;
+}
+/* text transform to uppercase if a sentence ends with an "!" */
+.music div:nth-child(1) span p{
+    text-transform: uppercase;
+    white-space: break-spaces;
+}
+
+
+.music div:nth-child(2){
+    background-image: url("../img/ice-cube.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    display: flex;
+}
+.music div:nth-child(2) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(2) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(2) span p{
+    white-space: break-spaces;
+}
+
+
+.music div:nth-child(3){
+    background-image: url("../img/mc-ren.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+}
+.music div:nth-child(3) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(3) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(3) span p{
+    white-space: break-spaces;
+}
+.music div:nth-child(3) span p span{
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.music div:nth-child(4){
+    background-image: url("../img/ice-cube.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    display: flex;
+}
+.music div:nth-child(4) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(4) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(4) span p{
+    white-space: break-spaces;
+}
+
+
+.music div:nth-child(5){
+    background-image: url("../img/mc-ren.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+}
+.music div:nth-child(5) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(5) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(5) span p{
+    white-space: break-spaces;
+}
+.music div:nth-child(5) span p span{
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.music div:nth-child(6){
+    background-image: url("../img/ice-cube.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    display: flex;
+}
+.music div:nth-child(6) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(6) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(6) span p{
+    white-space: break-spaces;
+}
+
+/* since this div is smaller I changed the background position on the image */
+.music div:nth-child(7){
+    background-image: url("../img/dre-ren.jpg");
+    background-size: cover;
+    background-position: right 0% top 30%;
+    height: 400px;
+    display: flex;
+}
+.music div:nth-child(7) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(7) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(7) span p{
+    white-space: break-spaces;
+}
+.music div:nth-child(7) span p span{
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.music div:nth-child(8){
+    background-image: url("../img/ice-cube.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+}
+.music div:nth-child(8) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(8) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(8) span p{
+    white-space: break-spaces;
+}
+
+
+.music div:nth-child(9){
+    background-image: url("../img/eazy-e.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+}
+.music div:nth-child(9) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(9) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(9) span p{
+    white-space: break-spaces;
+}
+
+
+.music div:nth-child(10){
+    background-image: url("../img/mc-ren.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 475px;
+    display: flex;
+}
+.music div:nth-child(10) span{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.music div:nth-child(10) span h3{
+    text-decoration: underline;
+}
+.music div:nth-child(10) span p{
+    white-space: break-spaces;  
+}
+.music div:nth-child(10) span p span{
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* About/Footer */
+/* I used a grid layout, 3 columns, with a gradient for the background */ 
+.about{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 35% 40% 25%;
+    background-image: linear-gradient(25deg,#d64c7f,#ee4758 50%);
+}
+/* column 1: the image in this column is translated so that it is slightly outside of the div */
+.col-1 img{
+    height: 100%;
+    transform: translate(25px, -50px);
+    border: solid 4px #0e0e0e;
+}
+
+/* column 2: displays the song, the group name, the album the the song is from and a little info about the song */
+.col-2{
+    height: 100%;
+    display: grid;
+}
+.col-2 div:nth-child(1) h4{
+    font-size: 25px;
+    padding: 10px;
+    margin: 0px;
+}
+.col-2 div:nth-child(1) h5{
+    font-size: 25px;
+    padding: 10px;
+    margin: 0px;
+}
+.span1{
+    font-family: Mistral;
+    font-size: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+.span2{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0px;
+}
+.col-2 div:nth-child(2) h5{
+    font-size: 25px;
+    padding: 10px;
+    margin: 0px;
+}
+.col-2 div:nth-child(2) p{
+    font-size: 20px;
+    padding: 10px;
+    margin: 0px;
+}
+
+/* column 3: this column has less relavent information about the song. I decided not the centre it and to make the font size smaller */
+.col-3{
+    height: 100%;
+    display: grid;
+}
+.col-3 div:nth-child(1) h6{
+    font-size: 15px;
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(1) p{
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(2) h6{
+    font-size: 15px;
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(2) p{
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(3) h6{
+    font-size: 15px;
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(3) p{
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(4) h6{
+    font-size: 15px;
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(4) p{
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(5) h6{
+    font-size: 15px;
+    padding: 10px;
+    margin: 0px;
+}
+.col-3 div:nth-child(5) p{
+    padding: 10px;
+    margin: 0px;
+}
+
+/* Video */
+/* height is 0px, this allows me to hide the div but not the video*/
+#video-container{
+    height: 0px;
+}
+/* this sets the postion of the buttons. The close class changes the postion whenever the user hides the video */
+#video-controls{
+    max-width: 100%;
+    position: fixed;
+    bottom: 361px;
+    right: 0px;
+}
+#video-controls.close{
+    max-width: 100%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+/* fixes the video in the bottom right corner. I gave it a slight border on the top and left only. The close class changes the visibility to hidden */
+#video{
+    max-width: 100%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border-top:#f4f4f4 20px solid;
+    border-left:#f4f4f4 3px solid;
+    border-top-left-radius: 10px;
+ }
+#video.close{
+    max-width: 100%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    visibility: hidden;
+ }
+ /* fixes the text "Music Video". The close class sets the visibility to hidden */
+ .music-vid{
+    max-width: 100%;
+    position: fixed;
+    bottom: 339px;
+    right: 115px;
+ }
+ .music-vid.hide{
+    visibility: hidden;
+ }
+/* styling a button */
+.show{
+    border-radius: 16px;
+    background-color: #f4f4f4;
+    border: none;
+    color: #0e0e0e;
+    text-align: center;
+    transform: translateX(20px);
+}
+.show:hover {
+    cursor: pointer;
+    background-color:rgba(244, 244, 244, 0.4);
+    border:#f4f4f4 1px solid;
+    color: #f4f4f4;
+}
+/* styling a button */
+.stop{
+    border-radius: 16px;
+    background-color: #0e0e0e;;
+    border: none;
+    color: #f4f4f4;
+    text-align: center;    
+}
+.stop:hover {
+    cursor: pointer;
+    background-color:rgba(14, 14, 14, 0.4);
+    border:#0e0e0e 1px solid;
+    color: #0e0e0e;
+}
+/* changes the button's visibility to hidden*/
+.stop.hide{
+    visibility: hidden;
+}
+.show.hide{
+    visibility: hidden;
+}
